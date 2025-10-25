@@ -1,37 +1,100 @@
-import ImageSlider from '@/components/ImageSlider';
+import { promotions, promotionDetails } from '@/data/promotions';
+import BackButton from '@/components/BackButton';
 import styles from './page.module.css';
+import ImageSlider from '@/components/ImageSlider';
 
-export async function generateStaticParams() {
-  return [{ id: '1' }, { id: '2' }, { id: '3' }];
+export function generateStaticParams() {
+  return promotions.map((promo) => ({
+    id: promo.id,
+  }));
 }
 
-export default function Home({ params }: { params: { id: string } }) {
-  const images = [
-    'http://1.201.169.106:8080/dmFileImages/upload/MRHST/SKYPASS-MAIN.png',
-    'http://1.201.169.106:8080/dmFileImages/upload/MRHST/SKYPASS-MAIN.png',
-    'http://1.201.169.106:8080/dmFileImages/upload/MRHST/SKYPASS-MAIN.png',
-  ];
+interface PromotionDetailPageProps {
+  params: { id: string };
+}
+
+export default function PromotionDetailPage({
+  params,
+}: PromotionDetailPageProps) {
+  const promotion = promotions.find((p) => p.id === params.id);
+  const details = promotionDetails[params.id];
+
+  if (!promotion || !details) {
+    return (
+      <main className={styles.main}>
+        <div className={styles.error}>
+          <h2>프로모션을 찾을 수 없습니다</h2>
+          <BackButton className={styles.errorBtn}>돌아가기</BackButton>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className={styles.main}>
       <header className={styles.header}>
-        <button className={styles.iconBtn}>←</button>
-        <h1>SKYPASS</h1>
-        <button className={styles.iconBtn}>☰</button>
+        <BackButton />
+        <h1>프로모션 상세</h1>
+        <button className={styles.shareBtn}>공유</button>
       </header>
 
-      <ImageSlider images={images} />
+      <div className={styles.content}>
+        <div className={styles.imageSection}>
+          <ImageSlider
+            images={[promotion.image, promotion.image, promotion.image]}
+          />
 
-      <section className={styles.content}>
-        <div className={styles.card}>
-          <h2>컨텐츠 제목</h2>
-          <p>컨텐츠 내용</p>
+          {promotion.badge && (
+            <span className={styles.badge}>{promotion.badge}</span>
+          )}
         </div>
-      </section>
+
+        <div className={styles.infoSection}>
+          <span className={styles.category}>{promotion.category}</span>
+          <h2 className={styles.title}>{promotion.title}</h2>
+          <p className={styles.period}>
+            기간: {promotion.startDate} ~ {promotion.endDate}
+          </p>
+        </div>
+
+        <div className={styles.section}>
+          <h3 className={styles.sectionTitle}>프로모션 소개</h3>
+          <p className={styles.description}>{details.detailedDescription}</p>
+        </div>
+
+        <div className={styles.section}>
+          <h3 className={styles.sectionTitle}>주요 혜택</h3>
+          <ul className={styles.benefitList}>
+            {details.benefits.map((benefit, index) => (
+              <li key={index} className={styles.benefitItem}>
+                <span className={styles.checkIcon}>✓</span>
+                {benefit}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className={styles.section}>
+          <h3 className={styles.sectionTitle}>이용 안내</h3>
+          <ul className={styles.termsList}>
+            {details.terms.map((term, index) => (
+              <li key={index} className={styles.termItem}>
+                • {term}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div className={styles.bottomActions}>
+        <button className={styles.applyBtn}>프로모션 참여하기</button>
+      </div>
 
       <nav className={styles.bottomNav}>
         {['홈', '혜택', '마일리지', '마이'].map((item) => (
-          <button key={item}>{item}</button>
+          <button key={item} className={item === '혜택' ? styles.active : ''}>
+            {item}
+          </button>
         ))}
       </nav>
     </main>
