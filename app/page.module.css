@@ -1,165 +1,131 @@
 .main {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: #f8f9fa;
-    max-width: 640px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f8f9fa;
+  max-width: 640px;
+  width: 100%;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 20px;
-    background: #fff;
-    border-bottom: 1px solid #e0e0e0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    max-width: 640px;
-    margin: 0 auto;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  max-width: 640px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .header h1 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-    margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
 }
 
 .backBtn,
 .iconBtn {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 4px 8px;
-    color: #333;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  color: #333;
 }
 
 .categoryFilter {
-    display: flex;
-    gap: 8px;
-    padding: 16px 20px;
-    background: #fff;
-    border-bottom: 1px solid #e0e0e0;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    max-width: 640px;
-    margin: 0 auto;
-    width: 100%;
+  display: flex;
+  gap: 8px;
+  padding: 16px 20px;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  max-width: 640px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .categoryFilter::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .categoryBtn {
-    padding: 8px 16px;
-    border: 1px solid #e0e0e0;
-    background: #fff;
-    border-radius: 20px;
-    font-size: 14px;
-    color: #666;
-    cursor: pointer;
-    transition: all 0.2s;
-    flex-shrink: 0;
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  border-radius: 20px;
+  font-size: 16px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.4s;
+  flex-shrink: 0;
 }
 
 .categoryBtn:hover {
-    border-color: #0066cc;
-    color: #0066cc;
+  border-color: #1434cb;
+  color: #1434cb;
 }
 
 .categoryBtn.active {
-    background: #0066cc;
-    border-color: #0066cc;
-    color: #fff;
-    font-weight: 600;
+  background: #1434cb;
+  border-color: #1434cb;
+  color: #fff;
+  font-weight: 600;
 }
 
 .promotionGrid {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 16px;
-    padding: 20px;
-    padding-bottom: 80px;
-}
-
-.bottomNav {
-    display: flex;
-    justify-content: space-around;
-    padding: 12px 20px;
-    background: #fff;
-    border-top: 1px solid #e0e0e0;
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 640px;
-    z-index: 50;
-}
-
-.bottomNav button {
-    background: none;
-    border: none;
-    font-size: 14px;
-    color: #999;
-    cursor: pointer;
-    padding: 8px 16px;
-    transition: color 0.2s;
-}
-
-.bottomNav button.active {
-    color: var(--visa-yellow);
-    font-weight: 600;
-}
-
-.bottomNav button:hover {
-    color: var(--visa-blue);
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+  padding: 20px;
+  padding-bottom: 80px;
 }
 
 /* 작은 모바일 화면 */
 @media (max-width: 360px) {
-    .promotionGrid {
-        gap: 12px;
-        padding: 16px;
-        padding-bottom: 80px;
-    }
+  .promotionGrid {
+    gap: 12px;
+    padding: 16px;
+    padding-bottom: 80px;
+  }
 
-    .header h1 {
-        font-size: 16px;
-    }
+  .header h1 {
+    font-size: 18px;
+  }
 
-    .categoryBtn {
-        padding: 6px 12px;
-        font-size: 13px;
-    }
+  .categoryBtn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
 }
 
 /* 매우 작은 화면 (아이폰 SE 등) */
 @media (max-width: 375px) {
-    .promotionGrid {
-        gap: 12px;
-        padding: 12px;
-        padding-bottom: 80px;
-    }
+  .promotionGrid {
+    gap: 12px;
+    padding: 12px;
+    padding-bottom: 80px;
+  }
 
-    .categoryFilter {
-        padding: 12px 16px;
-    }
+  .categoryFilter {
+    padding: 12px 16px;
+  }
 }
 
 /* 큰 모바일 화면 */
 @media (min-width: 480px) {
-    .promotionGrid {
-        gap: 20px;
-        padding: 24px;
-        padding-bottom: 80px;
-    }
+  .promotionGrid {
+    gap: 20px;
+    padding: 24px;
+    padding-bottom: 80px;
+  }
 }
