@@ -26,7 +26,7 @@
 .header h1 {
   font-size: 20px;
   font-weight: 700;
-  color: #1434cb;
+  color: var(--visa-blue);
   margin: 0;
   letter-spacing: -0.5px;
 }
@@ -37,7 +37,7 @@
   font-size: 16px;
   cursor: pointer;
   padding: 8px 16px;
-  color: #1434cb;
+  color: var(--visa-blue);
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 8px;
@@ -55,8 +55,13 @@
 .imageSection {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  background: linear-gradient(135deg, #1434cb 0%, #2c3280 50%, #1434cb 100%);
+  aspect-ratio: 3 / 2;
+  background: linear-gradient(
+    135deg,
+    var(--visa-blue) 0%,
+    #2c3280 50%,
+    var(--visa-blue) 100%
+  );
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(26, 31, 113, 0.15);
 }
@@ -77,7 +82,7 @@
   top: 20px;
   right: 20px;
   background: #eee;
-  color: #1434cb;
+  color: var(--visa-blue);
   padding: 10px 20px;
   border-radius: 24px;
   font-size: 14px;
@@ -85,6 +90,24 @@
   letter-spacing: 0.8px;
   box-shadow: 0 6px 20px rgba(247, 182, 0, 0.4);
   text-transform: uppercase;
+}
+.badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.langBadge {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 1px solid rgba(20, 52, 203, 0.1);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--visa-blue);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .infoSection {
@@ -94,102 +117,96 @@
   margin-bottom: 12px;
 }
 
+.location {
+  margin-top: 8px;
+  span {
+    display: block;
+    margin-bottom: 10px;
+  }
+  svg {
+    margin-right: 6px;
+    vertical-align: text-top;
+    color: var(--visa-blue);
+  }
+}
+
 .category {
   display: inline-block;
-  color: #f7b600;
+  color: var(--visa-yellow);
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.title {
-  font-size: 26px;
+.offer {
+  font-size: clamp(28px, 5vw, 36px);
   font-weight: 800;
-  color: #1a1a1a;
-  margin: 0 0 16px 0;
-  line-height: 1.3;
-  letter-spacing: -0.8px;
+  background: linear-gradient(
+    270deg,
+    var(--visa-blue),
+    #667eea,
+    #764ba2,
+    var(--visa-blue)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 20px 0;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  filter: drop-shadow(0 2px 12px rgba(102, 126, 234, 0.15));
+  animation: gradient 4s ease infinite;
+  background-size: 200% 200%;
 }
 
-.period {
-  font-size: 16px;
+/* @keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+} */
+
+.name {
+  font-size: 20px;
   color: #666;
   font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .section {
-  padding: 28px 24px;
+  padding: 28px 20px;
   background: #fff;
-  margin-bottom: 12px;
-  border-radius: 16px;
+  margin-bottom: 20px;
+  border-radius: 15px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  line-height: 1.5;
 }
 
 .sectionTitle {
   font-size: 18px;
   font-weight: 800;
-  color: #1434cb;
+  color: var(--visa-blue);
   margin: 0 0 20px 0;
   letter-spacing: -0.5px;
 }
 
 .description {
   font-size: 16px;
-  color: #4a4a4a;
   line-height: 1.7;
   margin: 0;
   font-weight: 400;
-}
-
-.benefitList,
-.termsList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.benefitItem {
-  display: flex;
-  align-items: flex-start;
-  padding: 16px 0;
-  font-size: 16px;
-  color: #1a1a1a;
-  line-height: 1.6;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  transition: all 0.2s ease;
-}
-
-.benefitItem:last-child {
-  border-bottom: none;
-}
-
-.checkIcon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
-  color: #fff;
-  border-radius: 50%;
-  font-size: 12px;
-  margin-right: 14px;
-  flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.25);
-}
-
-.termItem {
-  padding: 10px 0;
-  font-size: 16px;
-  color: #666;
-  line-height: 1.6;
-  font-weight: 400;
+  span {
+    display: block;
+  }
 }
 
 .bottomActions {
   position: fixed;
-  bottom: 60px;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -204,7 +221,7 @@
 .applyBtn {
   width: 100%;
   padding: 20px;
-  background: linear-gradient(135deg, #1434cb 0%, #2c3280 100%);
+  background: linear-gradient(135deg, var(--visa-blue) 0%, #2c3280 100%);
   color: #f7b600;
   border: none;
   border-radius: 14px;
@@ -285,7 +302,7 @@
 
 .errorBtn {
   padding: 14px 32px;
-  background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+  background: var(--visa-blue);
   color: #fff;
   border: none;
   border-radius: 12px;
@@ -299,23 +316,4 @@
 .errorBtn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
-}
-
-@media (max-width: 360px) {
-  .title {
-    font-size: 22px;
-  }
-
-  .section {
-    padding: 24px 20px;
-  }
-
-  .sectionTitle {
-    font-size: 17px;
-  }
-
-  .description,
-  .benefitItem {
-    font-size: 16px;
-  }
 }

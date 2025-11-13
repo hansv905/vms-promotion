@@ -1,41 +1,47 @@
 import Link from 'next/link';
 import styles from './PromotionCard.module.css';
+import { MapPinned } from 'lucide-react';
 
 export interface Promotion {
   id: string;
-  title: string;
-  description: string;
-  image: string;
-  category: string;
-  startDate: string;
-  endDate: string;
-  badge?: string;
+  Name: string;
+  Country: string;
+  Category: string;
+  Description: string[];
+  Language: string[];
+  Offer: string;
+  Program: string;
+  Location: string[];
+  Terms: string[];
+  Contact: Record<string, string>;
+  image: string[];
 }
 
 interface PromotionCardProps {
-  promotion: Promotion;
+  data: Promotion;
 }
 
-export default function PromotionCard({ promotion }: PromotionCardProps) {
+export default function PromotionCard({ data }: PromotionCardProps) {
   return (
-    <Link href={`/${promotion.id}`} className={styles.cardLink}>
+    <Link href={`/${data.id}`} className={styles.cardLink}>
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
           <img
-            src={promotion.image}
-            alt={promotion.title}
+            src={`/img/${data.id}/logo.png`}
+            alt={data.Name}
             className={styles.image}
           />
-          {promotion.badge && (
-            <span className={styles.badge}>{promotion.badge}</span>
+          {data.Language && (
+            <span className={styles.langBadge}>{data.Language.join(', ')}</span>
           )}
         </div>
         <div className={styles.content}>
-          <span className={styles.category}>{promotion.category}</span>
-          <h3 className={styles.title}>{promotion.title}</h3>
-          <p className={styles.description}>{promotion.description}</p>
-          <p className={styles.period}>
-            {promotion.startDate} ~ {promotion.endDate}
+          <span className={styles.category}>{data.Category}</span>
+          <h3 className={styles.name}>{data.Name}</h3>
+          <p className={styles.offer}>{data.Offer}</p>
+          <p className={styles.location}>
+            <MapPinned size={16} />
+            {data.Location[0]}
           </p>
         </div>
       </div>

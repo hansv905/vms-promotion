@@ -34,41 +34,81 @@
   object-fit: cover;
 }
 
-.badge {
+.langBadge {
   position: absolute;
   top: 8px;
   right: 8px;
-  background: #1434cb;
-  color: #fff;
   padding: 4px 8px;
   border-radius: 4px;
-  font-size: 12px;
-  font-weight: bold;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 1px solid rgba(20, 52, 203, 0.1);
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--visa-blue);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .content {
+  border-top: 1px solid #e0e0e0;
   padding: 12px;
 }
 
 .category {
   display: inline-block;
-  font-size: 12px;
-  color: #1434cb;
+  font-size: 16px;
+  color: var(--visa-yellow);
   font-weight: 600;
   margin-bottom: 4px;
   text-transform: uppercase;
 }
 
-.title {
+.name {
   font-size: 16px;
   font-weight: 600;
-  color: #333;
+  color: #666;
   margin: 4px 0;
-  line-height: 1.4;
+  line-height: 1;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.offer {
+  font-size: 26px;
+  font-weight: 800;
+  /* background: linear-gradient(135deg, #1434cb 0%, #667eea 50%, #764ba2 100%); */
+  background: linear-gradient(
+    270deg,
+    var(--visa-blue),
+    #667eea,
+    #764ba2,
+    var(--visa-blue)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 10px 0 5px 0;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  filter: drop-shadow(0 2px 12px rgba(102, 126, 234, 0.15));
+  animation: gradient 4s ease infinite;
+  background-size: 200% 200%;
+}
+.location {
+  margin-top: 8px;
+  color: #999;
+  span {
+    display: block;
+    margin-bottom: 10px;
+  }
+  svg {
+    margin-right: 6px;
+    vertical-align: text-top;
+    color: var(--visa-blue);
+  }
 }
 
 .description {
@@ -95,11 +135,15 @@
   }
 
   .category {
-    font-size: 11px;
+    font-size: 12px;
   }
 
-  .title {
+  .name {
     font-size: 14px;
+  }
+
+  .offer {
+    font-size: 20px;
   }
 
   .description {
@@ -107,31 +151,13 @@
   }
 
   .period {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .badge {
     padding: 3px 6px;
-    font-size: 11px;
+    font-size: 16px;
     top: 6px;
     right: 6px;
-  }
-}
-
-@media (min-width: 480px) {
-  .content {
-    padding: 14px;
-  }
-
-  .title {
-    font-size: 17px;
-  }
-
-  .description {
-    font-size: 15px;
-  }
-
-  .period {
-    font-size: 13px;
   }
 }

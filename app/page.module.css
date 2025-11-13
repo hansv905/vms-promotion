@@ -42,7 +42,7 @@
 .categoryFilter {
   display: flex;
   gap: 8px;
-  padding: 16px 20px;
+  padding: 10px 20px;
   background: #fff;
   border-bottom: 1px solid #e0e0e0;
   overflow-x: auto;
@@ -70,15 +70,14 @@
 }
 
 .categoryBtn:hover {
-  border-color: #1434cb;
-  color: #1434cb;
+  border-color: var(--visa-blue);
+  color: var(--visa-blue);
 }
 
 .categoryBtn.active {
-  background: #1434cb;
-  border-color: #1434cb;
+  background: var(--visa-blue);
+  border-color: var(--visa-blue);
   color: #fff;
-  font-weight: 600;
 }
 
 .promotionGrid {
