@@ -28,6 +28,9 @@ export default function PromotionCard({ data }: PromotionCardProps) {
         <div className={styles.imageWrapper}>
           <img
             src={`/img/${data.id}/logo.png`}
+            onError={(e) => {
+              e.currentTarget.src = 'https://dummyimage.com/1200x800/333/eee';
+            }}
             alt={data.Name}
             className={styles.image}
           />

@@ -143,12 +143,12 @@
   font-size: clamp(28px, 5vw, 36px);
   font-weight: 800;
   background: linear-gradient(
-    270deg,
-    var(--visa-blue),
-    #667eea,
-    #764ba2,
-    var(--visa-blue)
-  );
+    to right,
+    #9d50bb,
+    #4a90e2,
+    #29cccd
+  ); /* 보라색 -> 파란색 -> 하늘색 */
+  -webkit-background-clip: text; /* 텍스트 모양으로 배경을 클리핑 */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
