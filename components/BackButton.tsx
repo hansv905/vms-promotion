@@ -5,11 +5,10 @@ import styles from './BackButton.module.css';
 import { ChevronLeft } from 'lucide-react';
 
 interface BackButtonProps {
-  children?: React.ReactNode;
   className?: string;
 }
 
-export default function BackButton({ children, className }: BackButtonProps) {
+export default function BackButton({ className }: BackButtonProps) {
   const router = useRouter();
 
   return (

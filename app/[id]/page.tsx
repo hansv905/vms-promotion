@@ -66,7 +66,7 @@ export default async function PromotionDetailPage({
   return (
     <main className={styles.main}>
       <header className={styles.header}>
-        <BackButton>Back</BackButton>
+        <BackButton />
         <h1>{item.Offer}</h1>
         <div className={styles.country}>{item.Country}</div>
       </header>

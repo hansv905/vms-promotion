@@ -1,10 +1,12 @@
 'use client';
 import { useState } from 'react';
 import ContactDialog from '@/components/ContactDialog';
+import { Promotion } from '@/components/PromotionCard';
+
 import styles from './page.module.css';
 
 interface PromotionClientProps {
-  promotionItem: any;
+  promotionItem: Promotion;
 }
 
 export default function PromotionClient({

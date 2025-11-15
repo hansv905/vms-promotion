@@ -2,11 +2,12 @@
 
 import { X } from 'lucide-react';
 import styles from './ContactDialog.module.css';
+import { Promotion } from '@/components/PromotionCard';
 
 interface ContactDialogProps {
   isOpen: boolean;
   onClose: () => void;
-  promotionItem: any;
+  promotionItem: Promotion;
 }
 
 export default function ContactDialog({
