@@ -20,10 +20,11 @@ interface PromotionDetailPageProps {
   params: { id: string };
 }
 
-export default function PromotionDetailPage({
+export default async function PromotionDetailPage({
   params,
 }: PromotionDetailPageProps) {
-  const item = promotionData.find((p) => p.id === params.id);
+  const { id } = await params;
+  const item = promotionData.find((p) => p.id === id);
 
   if (!item) {
     return (
@@ -39,29 +40,23 @@ export default function PromotionDetailPage({
   return (
     <main className={styles.main}>
       <header className={styles.header}>
-        <ChevronLeft size={20} />
+        <ChevronLeft size={30} color="var(--visa-blue)" />
         <h1>{item.Country}</h1>
-        <button className={styles.shareBtn}>Share</button>
       </header>
 
       <div className={styles.content}>
         <div className={styles.imageSection}>
           <ImageSlider
-            images={[
-              'https://dummyimage.com/1200x800/eeeeee/999999',
-              'https://dummyimage.com/1200x800/eeeeee/999999',
-              'https://dummyimage.com/1200x800/eeeeee/999999',
-            ]}
+            images={item.image.map((img) => `/img/${item.id}/${img}`)}
           />
-
-          {item.Language && (
-            <span className={styles.badge}>{item.Language.join(', ')}</span>
-          )}
         </div>
         <div className={styles.infoSection}>
           <span className={styles.category}>{item.Category}</span>
           <h2 className={styles.name}>{item.Name}</h2>
           <p className={styles.offer}>{item.Offer}</p>
+        </div>
+        <div className={styles.section}>
+          <h3 className={styles.sectionTitle}>Service Languages</h3>
           <div className={styles.badges}>
             {item.Language.map((lang, index) => (
               <span key={index} className={styles.langBadge}>
@@ -92,7 +87,7 @@ export default function PromotionDetailPage({
           </p>
         </div>
 
-        <div className={styles.section}>
+        <div className={styles.sectionTerms}>
           <h3 className={styles.sectionTitle}>Terms & Conditions</h3>
           <ul className="termsList">
             {item.Terms.map((v, i) => (
@@ -105,7 +100,7 @@ export default function PromotionDetailPage({
       </div>
 
       <div className={styles.bottomActions}>
-        <button className={styles.applyBtn}>프로모션 참여하기</button>
+        <button className={styles.applyBtn}>Redeem Offer</button>
       </div>
     </main>
   );

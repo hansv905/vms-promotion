@@ -13,43 +13,16 @@ export default function PromotionsPage() {
   const [selectedCountry, setSelectedCountry] = useState('All');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const filteredByCountryData =
-    selectedCountry === 'All'
-      ? promotionData
-      : promotionData.filter((item) => item.Country === selectedCountry);
-
   const filteredPromotionData =
     selectedCategory === 'All'
-      ? filteredByCountryData
-      : filteredByCountryData.filter(
-          (item) => item.Category === selectedCategory
-        );
+      ? promotionData
+      : promotionData.filter((item) => item.Category === selectedCategory);
 
   return (
     <main className={styles.main}>
       <header className={styles.header}>
-        <button className={styles.backBtn}>
-          <ChevronLeft size={20} />
-        </button>
         <h1>Promotion</h1>
-        <button className={styles.iconBtn}>
-          <Menu size={20} />
-        </button>
       </header>
-
-      <div className={styles.categoryFilter}>
-        {countries.map((country) => (
-          <button
-            key={country}
-            className={`${styles.categoryBtn} ${
-              selectedCountry === country ? styles.active : ''
-            }`}
-            onClick={() => setSelectedCountry(country)}
-          >
-            {country}
-          </button>
-        ))}
-      </div>
 
       <div className={styles.categoryFilter}>
         {categories.map((category) => (
@@ -66,6 +39,10 @@ export default function PromotionsPage() {
       </div>
 
       <div className={styles.promotionGrid}>
+        <div className={styles.cnt}>
+          {filteredPromotionData.length}{' '}
+          {filteredPromotionData.length === 1 ? 'Offer' : 'Offers'}
+        </div>
         {filteredPromotionData.map((item) => (
           <PromotionCard key={item.id} data={item} />
         ))}

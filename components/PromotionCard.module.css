@@ -44,7 +44,7 @@
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   border: 1px solid rgba(20, 52, 203, 0.1);
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--visa-blue);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -60,8 +60,6 @@
   font-size: 16px;
   color: var(--visa-yellow);
   font-weight: 600;
-  margin-bottom: 4px;
-  text-transform: uppercase;
 }
 
 .name {
@@ -79,14 +77,8 @@
 .offer {
   font-size: 26px;
   font-weight: 800;
-  /* background: linear-gradient(135deg, #1434cb 0%, #667eea 50%, #764ba2 100%); */
-  background: linear-gradient(
-    270deg,
-    var(--visa-blue),
-    #667eea,
-    #764ba2,
-    var(--visa-blue)
-  );
+  background: linear-gradient(to right, #9d50bb, #4a90e2, #29cccd);
+  -webkit-background-clip: text;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -100,13 +92,16 @@
 .location {
   margin-top: 8px;
   color: #999;
+  font-size: 14px;
   span {
     display: block;
     margin-bottom: 10px;
   }
   svg {
     margin-right: 6px;
-    vertical-align: text-top;
+    vertical-align: bottom;
+    width: 14px;
+    height: 14px;
     color: var(--visa-blue);
   }
 }
