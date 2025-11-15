@@ -29,6 +29,19 @@
   margin: 0;
 }
 
+.bannerWrap {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 12px;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
 .backBtn,
 .iconBtn {
   background: none;
