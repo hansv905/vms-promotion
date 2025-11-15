@@ -4,6 +4,7 @@ import BackButton from '@/components/BackButton';
 import styles from './page.module.css';
 import ImageSlider from '@/components/ImageSlider';
 import { MapPinned } from 'lucide-react';
+import PromotionClient from './PromotionClient';
 
 export function generateStaticParams() {
   return promotionData.map((promo) => ({
@@ -124,10 +125,7 @@ export default async function PromotionDetailPage({
           </ul>
         </div>
       </div>
-
-      <div className={styles.bottomActions}>
-        <button className={styles.applyBtn}>Redeem Offer</button>
-      </div>
+      <PromotionClient promotionItem={item} />
     </main>
   );
 }

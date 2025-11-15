@@ -113,7 +113,7 @@
   padding: 32px 15px;
   background: #fff;
   /* border-bottom: 1px solid rgba(26, 31, 113, 0.06); */
-  margin-bottom: 10px;
+  margin-bottom: 1px;
   background: #fafafa;
 }
 
@@ -215,18 +215,16 @@
 
 .applyBtn {
   width: 100%;
-  padding: 20px;
-  background: linear-gradient(135deg, var(--visa-blue) 0%, #2c3280 100%);
-  color: #f7b600;
+  padding: 15px;
+  background: var(--visa-yellow);
+  color: var(--foreground);
   border: none;
   border-radius: 14px;
-  font-size: 17px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 8px 24px rgba(26, 31, 113, 0.25);
   letter-spacing: 0.5px;
-  text-transform: uppercase;
   position: relative;
   overflow: hidden;
 }
