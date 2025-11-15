@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import styles from './BackButton.module.css';
+import { ChevronLeft } from 'lucide-react';
 
 interface BackButtonProps {
   children?: React.ReactNode;
@@ -16,7 +17,8 @@ export default function BackButton({ children, className }: BackButtonProps) {
       className={className || styles.backBtn}
       onClick={() => router.push('/')}
     >
-      {children}
+      <ChevronLeft size={24} />
+      {/* {children} */}
     </button>
   );
 }

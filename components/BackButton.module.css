@@ -1,8 +1,12 @@
 .backBtn {
   background: none;
   border: none;
-  font-size: 20px;
   cursor: pointer;
-  padding: 4px 8px;
-  color: #333;
+  color: var(--visa-blue);
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+.backBtn:hover {
+  color: var(--visa-yellow);
 }

@@ -1,19 +1,45 @@
+import { Metadata } from 'next';
 import { promotionData } from '@/data/promotions';
 import BackButton from '@/components/BackButton';
 import styles from './page.module.css';
 import ImageSlider from '@/components/ImageSlider';
-import {
-  Check,
-  ChevronLeft,
-  CircleCheck,
-  MapPin,
-  MapPinned,
-} from 'lucide-react';
+import { MapPinned } from 'lucide-react';
 
 export function generateStaticParams() {
   return promotionData.map((promo) => ({
     id: promo.id,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: PromotionDetailPageProps): Promise<Metadata> {
+  const { id } = await params;
+  const item = promotionData.find((p) => p.id === id);
+
+  if (!item) {
+    return {
+      title: 'Promotion Not Found',
+    };
+  }
+
+  return {
+    title: `${item.Name} - ${item.Offer}`,
+    description: item.Description.join(' ').slice(0, 160),
+    keywords: [item.Category, item.Country, 'Visa'],
+    openGraph: {
+      title: item.Name,
+      description: item.Offer,
+      images: [`/img/${item.id}/1.jpg`],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: item.Name,
+      description: item.Offer,
+      images: [`/img/${item.id}/1.jpg`],
+    },
+  };
 }
 
 interface PromotionDetailPageProps {
@@ -31,7 +57,6 @@ export default async function PromotionDetailPage({
       <main className={styles.main}>
         <div className={styles.error}>
           <h2>Promotion not found</h2>
-          <BackButton className={styles.errorBtn}>Back</BackButton>
         </div>
       </main>
     );
@@ -40,8 +65,9 @@ export default async function PromotionDetailPage({
   return (
     <main className={styles.main}>
       <header className={styles.header}>
-        <ChevronLeft size={30} color="var(--visa-blue)" />
-        <h1>{item.Country}</h1>
+        <BackButton>Back</BackButton>
+        <h1>{item.Offer}</h1>
+        <div className={styles.country}>{item.Country}</div>
       </header>
 
       <div className={styles.content}>
