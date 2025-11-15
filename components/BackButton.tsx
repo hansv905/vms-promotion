@@ -14,9 +14,9 @@ export default function BackButton({ children, className }: BackButtonProps) {
   return (
     <button
       className={className || styles.backBtn}
-      onClick={() => router.back()}
+      onClick={() => router.push('/')}
     >
-      {children || '←'}
+      {children}
     </button>
   );
 }

@@ -53,7 +53,7 @@ export const promotionData: Promotion[] = [
       'The promotion is not valid for any payment made by a Visa card issued in Korea.',
       'Offer cannot be combined with other promotions or discounts. ',
       'To redeem the offer, advanced booking for appointments or consultations is required.',
-      ' Click the ""Redeem Offer"" below to make your booking.',
+      ' Click the "Redeem Offer" below to make your booking.',
     ],
     Contact: {
       Email: 'globalcha@chamc.co.kr',
@@ -88,10 +88,10 @@ export const promotionData: Promotion[] = [
       'The promotion is not valid for any payment made by a Visa card issued in Korea.',
       'Offer cannot be combined with other promotions or discounts. ',
       'To redeem the offer, advanced booking for appointments or consultations is required.',
-      ' Click the ""Redeem Offer"" below to make your booking.',
+      ' Click the "Redeem Offer" below to make your booking.',
     ],
     Contact: {},
-    image: ['1.png', '2.png'],
+    image: ['1.jpg', '2.jpg'],
   },
   {
     id: '6',
@@ -112,12 +112,12 @@ export const promotionData: Promotion[] = [
       'The promotion is not valid for any payment made by a Visa card issued in Korea.',
       'Offer cannot be combined with other promotions or discounts. ',
       'To redeem the offer, advanced booking for appointments or consultations is required.',
-      ' Click the ""Redeem Offer"" below to make your booking.',
+      ' Click the "Redeem Offer" below to make your booking.',
     ],
     Contact: {
       Email: 'daindental2274@gmail.com',
     },
-    image: ['1.png', '2.png'],
+    image: ['1.jpg', '2.jpg'],
   },
   {
     id: '7',
@@ -139,7 +139,7 @@ export const promotionData: Promotion[] = [
       'The promotion is not valid for any payment made by a Visa card issued in Korea.',
       'Offer cannot be combined with other promotions or discounts. ',
       'To redeem the offer, advanced booking for appointments or consultations is required.',
-      ' Click the ""Redeem Offer"" below to make your booking.',
+      ' Click the "Redeem Offer" below to make your booking.',
     ],
     Contact: {
       Email: 'daindental2274@gmail.com',

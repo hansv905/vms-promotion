@@ -19,7 +19,15 @@ export default function ImageSlider({ images }: { images: string[] }) {
       >
         {images.map((src, i) => (
           <SwiperSlide key={i}>
-            <img src={src} alt={`slide ${i}`} className={styles.slideImage} />
+            <img
+              src={src}
+              alt={`slide ${i}`}
+              className={styles.slideImage}
+              onError={(e) => {
+                e.currentTarget.src =
+                  'https://dummyimage.com/1200x800/333/eee&text=Image+Not+Found&font=roboto';
+              }}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
