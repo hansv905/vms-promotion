@@ -82,16 +82,6 @@ export default async function PromotionDetailPage({
           <h2 className={styles.name}>{item.Name}</h2>
           <p className={styles.offer}>{item.Offer}</p>
         </div>
-        <div className={styles.section}>
-          <h3 className={styles.sectionTitle}>Service Languages</h3>
-          <div className={styles.badges}>
-            {item.Language.map((lang, index) => (
-              <span key={index} className={styles.langBadge}>
-                {lang}
-              </span>
-            ))}
-          </div>
-        </div>
 
         <div className={styles.section}>
           <h3 className={styles.sectionTitle}>Description</h3>
@@ -112,6 +102,17 @@ export default async function PromotionDetailPage({
               </span>
             ))}
           </p>
+        </div>
+
+        <div className={styles.section}>
+          <h3 className={styles.sectionTitle}>Service Languages</h3>
+          <div className={styles.badges}>
+            {item.Language.map((lang, index) => (
+              <span key={index} className={styles.langBadge}>
+                {lang}
+              </span>
+            ))}
+          </div>
         </div>
 
         <div className={styles.sectionTerms}>

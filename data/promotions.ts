@@ -43,8 +43,7 @@ export const promotionData: Promotion[] = [
       'Our patented Evercell stem cell solution supports a healthier, youthful you.',
     ],
     Language: ['English', '한국어', '中文', '日本語'],
-    Offer:
-      '15% off Health Screening Packages & Evercell Treatment (Stem Cell Injection)',
+    Offer: '15% off Health Screening Packages & Evercell Treatment',
     Program: '',
     Location: ['442, Dosan-daero, Gangnam-gu, Seoul'],
     Terms: [
