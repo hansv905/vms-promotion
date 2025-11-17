@@ -19,7 +19,7 @@ export const promotionData: Promotion[] = [
       'Seoul Gangnam Center: 7F to 11F, I Tower, 326, Teheran-ro, Gangnam-gu, Seoul',
     ],
     Terms: [
-      'This offer is valid from ____ December 2025 to 30 November 2026.',
+      'This offer is valid from 1 December 2025 to 30 November 2026.',
       'The promotion is not available to any: (i) Korean citizens; (ii) any individual that is insured under the Korean national health insurance, either as a principal or a dependent; and (iii) any individual that is resident in Korea.',
       'The promotion is not valid for any payment made by a Visa card issued in Korea.',
       'Offer cannot be combined with other promotions or discounts.',
@@ -48,7 +48,7 @@ export const promotionData: Promotion[] = [
     Program: '',
     Location: ['442, Dosan-daero, Gangnam-gu, Seoul'],
     Terms: [
-      'This offer is valid from ____ December 2025 to 30 November 2026.',
+      'This offer is valid from 1 December 2025 to 30 November 2026.',
       'The promotion is not available to any: (i) Korean citizens; (ii) any individual that is insured under the Korean national health insurance, either as a principal or a dependent; and (iii) any individual that is resident in Korea.',
       'The promotion is not valid for any payment made by a Visa card issued in Korea.',
       'Offer cannot be combined with other promotions or discounts. ',
@@ -83,7 +83,7 @@ export const promotionData: Promotion[] = [
     Program: '',
     Location: ['108, Bongeunsa-ro, Gangnam-gu, Seoul'],
     Terms: [
-      'This offer is valid from ____ December 2025 to 30 November 2026.',
+      'This offer is valid from 1 December 2025 to 30 November 2026.',
       'The promotion is not available to any: (i) Korean citizens; (ii) any individual that is insured under the Korean national health insurance, either as a principal or a dependent; and (iii) any individual that is resident in Korea.',
       'The promotion is not valid for any payment made by a Visa card issued in Korea.',
       'Offer cannot be combined with other promotions or discounts. ',
@@ -107,7 +107,7 @@ export const promotionData: Promotion[] = [
     Program: '',
     Location: ['10F, 11F, Grand Plaza, 94, Sinchon-ro, Mapo-gu, Seoul'],
     Terms: [
-      'This offer is valid from ____ December 2025 to 30 November 2026.',
+      'This offer is valid from 1 December 2025 to 30 November 2026.',
       'The promotion is not available to any: (i) Korean citizens; (ii) any individual that is insured under the Korean national health insurance, either as a principal or a dependent; and (iii) any individual that is resident in Korea.',
       'The promotion is not valid for any payment made by a Visa card issued in Korea.',
       'Offer cannot be combined with other promotions or discounts. ',
@@ -134,7 +134,7 @@ export const promotionData: Promotion[] = [
     Program: '',
     Location: ['360, Gangnam-daero, Gangnam-gu, Seoul'],
     Terms: [
-      'This offer is valid from ____ December 2025 to 30 November 2026.',
+      'This offer is valid from 1 December 2025 to 30 November 2026.',
       'The promotion is not available to any: (i) Korean citizens; (ii) any individual that is insured under the Korean national health insurance, either as a principal or a dependent; and (iii) any individual that is resident in Korea.',
       'The promotion is not valid for any payment made by a Visa card issued in Korea.',
       'Offer cannot be combined with other promotions or discounts. ',
