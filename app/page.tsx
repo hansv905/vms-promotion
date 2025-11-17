@@ -20,13 +20,10 @@ export default function PromotionsPage() {
   return (
     <main className={styles.main}>
       <header className={styles.header}>
-        <h1>Promotion</h1>
+        <h1>Medical Benefit</h1>
       </header>
       <div className={styles.bannerWrap}>
-        <img
-          src="https://dummyimage.com/1200x800/333/eee"
-          alt="Promotion Banner"
-        />
+        <img src="/img/main.jpg" alt="Promotion Banner" />
       </div>
 
       <div className={styles.categoryFilter}>

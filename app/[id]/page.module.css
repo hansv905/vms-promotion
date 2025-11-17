@@ -141,17 +141,12 @@
 .offer {
   font-size: clamp(32px, 5vw, 36px);
   font-weight: 800;
-  background: linear-gradient(
-    to right,
-    #9d50bb,
-    #4a90e2,
-    #29cccd
-  ); /* 보라색 -> 파란색 -> 하늘색 */
-  -webkit-background-clip: text; /* 텍스트 모양으로 배경을 클리핑 */
+  background: var(--visa-blue);
+  -webkit-background-clip: text;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 1.1;
+  line-height: 1;
   letter-spacing: -1.5px;
   filter: drop-shadow(0 2px 12px rgba(102, 126, 234, 0.15));
   animation: gradient 4s ease infinite;
