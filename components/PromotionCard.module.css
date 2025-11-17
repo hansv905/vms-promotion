@@ -77,7 +77,7 @@
 .offer {
   font-size: 26px;
   font-weight: 800;
-  background: linear-gradient(to right, #9d50bb, #4a90e2, #29cccd);
+  background: var(--visa-blue);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-background-clip: text;
