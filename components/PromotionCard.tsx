@@ -10,7 +10,7 @@ export interface Promotion {
   Description: string[];
   Language: string[];
   Offer: string;
-  Program: string;
+  Program: Record<string, Record<string, string[]>>;
   Location: string[];
   Terms: string[];
   Contact: Record<string, string>;

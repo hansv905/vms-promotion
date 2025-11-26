@@ -12,8 +12,8 @@
 
 .dialog {
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  border-radius: 24px;
-  padding: 40px;
+  border-radius: 20px;
+  padding: 30px;
   max-width: 500px;
   width: 90%;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
@@ -53,29 +53,27 @@
 }
 
 .contactRow {
-  padding: 16px 20px;
+  padding: 10px 0px;
   background: white;
-  border-radius: 12px;
   margin-bottom: 12px;
-  border: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
   transition: all 0.2s ease;
   display: flex;
+  flex-direction: column;
   gap: 8px;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.contactRow:hover {
-  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.1);
-  transform: translateY(-2px);
-}
-
-.contactRow strong {
+.contactRow label {
+  display: flex;
   font-weight: 600;
   min-width: 80px;
   text-transform: capitalize;
 }
 
 .contactLink {
+  display: flex;
+
   color: var(--visa-blue);
   text-decoration: none;
   font-weight: 500;

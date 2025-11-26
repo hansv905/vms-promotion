@@ -30,7 +30,7 @@ export default function ContactDialog({
         <p className={styles.subtitle}>{Offer}</p>
         {Object.entries(Contact).map(([key, value]) => (
           <div key={key} className={styles.contactRow}>
-            <strong>{key}</strong>
+            <label>{key}</label>
             <a href={`mailto:${value}`} className={styles.contactLink}>
               {String(value)}
             </a>

@@ -2,6 +2,87 @@ import { Promotion } from '@/components/PromotionCard';
 
 export const promotionData: Promotion[] = [
   {
+    id: '1',
+    Category: 'Health Checkup',
+    Name: 'KMI (Korea Medical Institute)',
+    Country: 'KOREA',
+    Description: [
+      'Since 1985, KMI has been offering advanced medical check-up services with multilingual support at eight centers nationwide.',
+      'KMI has built a strong referral network with over 50 partner hospitals.',
+      'When serious illness is suspected or abnormal findings are detected, patients are promptly referred to tertiary care institutions.',
+      'Examination results are available in multiple languages, including English, Chinese, and Japanese.',
+    ],
+    Language: ['English', '한국어', '中文', '日本語'],
+    Offer: 'Comprehensive Health Screening Package(Price: KRW 800,000)',
+    Program: {
+      'Global Comprehensive Health Check-up': {
+        'Liver Function': [
+          'Total Protein, Albumin, Globulin, A/G Ratio, Total Bilirubin, Direct Bilirubin, Indirect Bilirubin, AST (Aspartate Aminotransferase), ALT (Alanine Aminotransferase), γ-GTP (Gamma-Glutamyl Transpeptidase), ALP (Alkaline Phosphatase), Hepatitis, HBsAg, HBsAb',
+        ],
+        'Lipid Profile': [
+          'Total Cholesterol, HDL Cholesterol, LDL Cholesterol, Triglycerides',
+        ],
+        'Diabetes Tests': [
+          'Fasting Blood Glucose, HbA1c (Glycated Hemoglobin)',
+        ],
+        'Pancreatic Function Test': ['Amylase'],
+        'Kidney Function Test': ['Blood Urea Nitrogen (BUN), Creatinine (Cr)'],
+        'Gout & Inflammatory Response Tests': [
+          'Uric Acid (Gout), Rheumatoid Factor (RF)',
+        ],
+        'Tumor Marker Tests': [
+          'AFP (Alpha-Fetoprotein), CEA (Carcinoembryonic Antigen), CA19-9',
+        ],
+        'Anemia Tests': ['Serum Iron'],
+        'Electrolyte Tests': ['Calcium, Phosphate (P)'],
+        Hematology: [
+          'Red Blood Cell Count (RBC), Hemoglobin (Hb), Hematocrit (Hct), MCV (Mean Corpuscular Volume), MCH (Mean Corpuscular Hemoglobin), MCHC (Mean Corpuscular Hemoglobin Concentration), RDW (Red Cell Distribution Width), Platelet Count (PLT), MPV (Mean Platelet Volume), PDW (Platelet Distribution Width), White Blood Cell Count (WBC), Neutrophils, Lymphocytes, Monocytes, Eosinophils, Basophils',
+        ],
+        'Urine Test': [
+          'White Blood Cells (WBC), Nitrite, Specific Gravity, pH, Protein, Glucose, Ketone, Urobilinogen, Bilirubin, Red Blood Cells (Hematuria)',
+        ],
+        'Basic Tests': [
+          'Body Measurement, Weight, Blood Pressure, Waist Circumference, BMI, Vision, Hearing',
+        ],
+        Ophthalmology: [
+          'Fundus Examination, Intraocular Pressure, Color Vision Test',
+        ],
+        'Body Composition': ['Body Composition Analysis'],
+        'Pulmonary Function Test': [],
+        'Chest X-ray': [],
+        Electrocardiogram: [],
+        'Gastrointestinal Test (Choose One)': [
+          'Upper GI Series (Option 1)',
+          'Gastroscopy (without sedation)',
+        ],
+        'Stomach Cancer Screening': ['Pepsinogen Test'],
+        'Abdominal Ultrasound': [],
+        'Bone Density Test': [],
+        'Thyroid Ultrasound': [],
+        'Brain Health / Dementia Assessment': [
+          'Alzheimer’s Brain Health Test (Beta-Amyloid Aggregation)',
+        ],
+        'Mammography (Women Only)': [],
+      },
+    },
+    Location: [
+      'Gangnam Center: 411, Teheran-ro, Gangnam-gu, Seoul',
+      'Gwanghwamun Center: 149, Sejong - daero, Jongno - gu, Seoul',
+    ],
+    Terms: [
+      'This offer is valid from 1 December 2025 to 30 November 2026.',
+      'The promotion is not available to any: (i) Korean citizens; (ii) any individual that is insured under the Korean national health insurance, either as a principal or a dependent; and (iii) any individual that is resident in Korea.',
+      'The promotion is not valid for any payment made by a Visa card issued in Korea.',
+      'Offer cannot be combined with other promotions or discounts.',
+      'To redeem the offer, advanced booking for appointments or consultations is required.',
+      'Click the [Redeem Offer] below to make your booking.',
+    ],
+    Contact: {
+      Email: 'kmiglobal@kmi.or.kr',
+    },
+    image: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
+  },
+  {
     id: '2',
     Category: 'Health Checkup',
     Name: 'Hanaro Medical Foundation',
@@ -13,7 +94,7 @@ export const promotionData: Promotion[] = [
     ],
     Language: ['English', '한국어'],
     Offer: '15% off Health Checkup Packages',
-    Program: '',
+    Program: {},
     Location: [
       'Jongno Center: 5F Gran Seoul Tower, 33, Jong-ro, Jongno-gu',
       'Seoul Gangnam Center: 7F to 11F, I Tower, 326, Teheran-ro, Gangnam-gu, Seoul',
@@ -44,7 +125,7 @@ export const promotionData: Promotion[] = [
     ],
     Language: ['English', '한국어', '中文', '日本語'],
     Offer: '15% off Health Screening Packages & Evercell Treatment',
-    Program: '',
+    Program: {},
     Location: ['442, Dosan-daero, Gangnam-gu, Seoul'],
     Terms: [
       'This offer is valid from 1 December 2025 to 30 November 2026.',
@@ -79,7 +160,7 @@ export const promotionData: Promotion[] = [
       'កម្ពុជា',
     ],
     Offer: '10% off All Treatments',
-    Program: '',
+    Program: {},
     Location: ['108, Bongeunsa-ro, Gangnam-gu, Seoul'],
     Terms: [
       'This offer is valid from 1 December 2025 to 30 November 2026.',
@@ -103,7 +184,7 @@ export const promotionData: Promotion[] = [
     ],
     Language: ['English', '한국어', '中文'],
     Offer: '10% off All Treatments',
-    Program: '',
+    Program: {},
     Location: ['10F, 11F, Grand Plaza, 94, Sinchon-ro, Mapo-gu, Seoul'],
     Terms: [
       'This offer is valid from 1 December 2025 to 30 November 2026.',
@@ -130,7 +211,7 @@ export const promotionData: Promotion[] = [
     ],
     Language: ['English', '한국어', '中文', '日本語', 'Монгол', 'Tiếng Việt'],
     Offer: '10% off All Treatments',
-    Program: '',
+    Program: {},
     Location: ['360, Gangnam-daero, Gangnam-gu, Seoul'],
     Terms: [
       'This offer is valid from 1 December 2025 to 30 November 2026.',

@@ -5,7 +5,7 @@ import styles from './page.module.css';
 import ImageSlider from '@/components/ImageSlider';
 import { MapPinned } from 'lucide-react';
 import PromotionClient from './PromotionClient';
-
+import { Fragment } from 'react';
 export function generateStaticParams() {
   return promotionData.map((promo) => ({
     id: promo.id,
@@ -114,6 +114,37 @@ export default async function PromotionDetailPage({
             ))}
           </div>
         </div>
+
+        {item.Program && Object.keys(item.Program).length > 0 && (
+          <div className={styles.section}>
+            <h3 className={styles.sectionTitle}>Program Detail</h3>
+            <div className={styles.programList}>
+              {Object.entries(item.Program).map(([key, data]) => (
+                <Fragment key={key}>
+                  <div className={styles.topCategory}>{key}</div>
+                  {Object.entries(data).map(([k, v], idx) => (
+                    <Fragment key={k}>
+                      <div
+                        className={`${styles.subCategory} ${
+                          idx === 0 ? styles.firstSub : ''
+                        }`}
+                      >
+                        {k}
+                      </div>
+                      <ul className={styles.programItems}>
+                        {v.map((item, idx) => (
+                          <li key={idx} className={styles.programItem}>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </Fragment>
+                  ))}
+                </Fragment>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className={styles.sectionTerms}>
           <h3 className={styles.sectionTitle}>Terms & Conditions</h3>
