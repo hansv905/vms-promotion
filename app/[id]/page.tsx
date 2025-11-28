@@ -5,7 +5,6 @@ import styles from './page.module.css';
 import ImageSlider from '@/components/ImageSlider';
 import { MapPinned } from 'lucide-react';
 import PromotionClient from './PromotionClient';
-import { Fragment } from 'react';
 export function generateStaticParams() {
   return promotionData.map((promo) => ({
     id: promo.id,
@@ -63,6 +62,15 @@ export default async function PromotionDetailPage({
     );
   }
 
+  const getLIDepth = (str: string) => {
+    const match = str.match(/^(-+)/);
+    if (match === null) {
+      return 0;
+    }
+
+    return match ? match[1].length : 0;
+  };
+
   return (
     <main className={styles.main}>
       <header className={styles.header}>
@@ -115,7 +123,7 @@ export default async function PromotionDetailPage({
           </div>
         </div>
 
-        {item.Program && Object.keys(item.Program).length > 0 && (
+        {/* {item.Program && Object.keys(item.Program).length > 0 && (
           <div className={styles.section}>
             <h3 className={styles.sectionTitle}>Program Detail</h3>
             <div className={styles.programList}>
@@ -144,7 +152,31 @@ export default async function PromotionDetailPage({
               ))}
             </div>
           </div>
-        )}
+        )} */}
+
+        <div className={styles.section}>
+          <h3 className={styles.sectionTitle}>Program Details</h3>
+          <ul className={styles.programList}>
+            {Array.isArray(item.Program) &&
+              item.Program.map((v, i) => (
+                <li
+                  key={i}
+                  className={`${styles.programItem} ${
+                    styles[`depth${getLIDepth(v)}`]
+                  }`}
+                >
+                  {v.replace(/^(-+)/, '')}
+                </li>
+              ))}
+            {typeof item.Program === 'string' && (
+              <li
+                className={`${styles.programItem} ${styles.depth0} ${styles.str}`}
+              >
+                {item.Program}
+              </li>
+            )}
+          </ul>
+        </div>
 
         <div className={styles.sectionTerms}>
           <h3 className={styles.sectionTitle}>Terms & Conditions</h3>

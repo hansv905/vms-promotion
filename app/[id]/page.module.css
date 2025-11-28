@@ -347,7 +347,7 @@
   color: var(--visa-blue);
 }
 
-.programItems {
+li.programItems {
   list-style: none;
   margin: 0;
   padding-left: 10px;
@@ -355,10 +355,64 @@
   flex-direction: column;
 }
 
-.programItem {
+li.programItem {
   position: relative;
   padding-left: 12px;
   font-size: 14px;
   color: #555;
   line-height: 1.5;
+}
+
+ul.programList {
+  list-style-type: none;
+  padding-left: 0;
+}
+li.programItem {
+  margin-bottom: 5px;
+  padding-left: 0;
+}
+li.programItem.depth0 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+/* 그냥 글자만 있는 경우 */
+li.programItem.depth0.str {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--foreground);
+}
+li.programItem.depth1 {
+  margin-left: 5px;
+  margin-top: 4;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  font-size: 16px;
+}
+li.programItem.depth1::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  width: 3px;
+  height: 3px;
+  background-color: var(--visa-blue);
+  border-radius: 50%;
+}
+
+li.programItem.depth2 {
+  margin-left: 20px;
+  padding-left: 20px;
+  font-size: 15px;
+  color: #999;
+}
+
+li.programItem.depth2::after {
+  content: '- ';
+  position: absolute;
+  left: 5px;
+  top: 0px;
+}
+li.programItem.depth3 {
+  margin-left: 48px;
 }
