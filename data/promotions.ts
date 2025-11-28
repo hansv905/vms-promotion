@@ -293,8 +293,8 @@ export const promotionData: Promotion[] = [
     ],
     Offer: '10% off All Dental Treatments',
     Program: [
-      '1. 10% off All Dental Treatments',
-      '2. Complimentary Gum Care Set',
+      '- 1. 10% off All Dental Treatments',
+      '- 2. Complimentary Gum Care Set',
     ],
     Location: ['108, Bongeunsa-ro, Gangnam-gu, Seoul'],
     Terms: [
@@ -700,11 +700,9 @@ export const promotionData: Promotion[] = [
     Language: ['English', '日本語'],
     Offer: '15% off Red Ginseng Full Care Spa Program',
     Program: [
-      '1. 15% off Red Ginseng Full Care Spa Program (3 hours)',
-      '',
-      'Original Price: KRW 395,000',
-      'Special Price: KRW 335,750',
-      '',
+      '15% off Red Ginseng Full Care Spa Program (3 hours)',
+      '- Original Price: KRW 395,000',
+      '- Special Price: KRW 335,750',
       '- Program: Face, Body, Foot, Scalp targeted Red Ginseng Spa',
     ],
     Location: ['403, Gangnam-daero, Seocho-gu, Seoul'],

@@ -46,22 +46,54 @@
 }
 
 .subtitle {
+  margin-bottom: 20px;
   font-size: 16px;
   color: var(--foreground);
-  margin: 0 0 32px 0;
   font-weight: 500;
 }
 
 .contactRow {
-  padding: 10px 0px;
+  padding: 10px 10px;
   background: white;
   margin-bottom: 12px;
-  border-bottom: 1px solid #e8e8e8;
   transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
   gap: 8px;
   align-items: flex-start;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px 10px;
+  animation: contactFadeIn 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  strong {
+    span {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      b {
+        margin-right: 5px;
+        padding: 2px 5px;
+        font-size: 12px;
+        border-radius: 4px 4px;
+        background: #333;
+        color: #fff;
+        font-weight: 500;
+      }
+    }
+  }
+}
+.contactText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  color: var(--foreground);
+  text-align: center;
+  img {
+    display: block;
+    margin: 0px auto;
+    max-width: 150px;
+  }
 }
 
 .contactRow label {
@@ -73,13 +105,25 @@
 
 .contactLink {
   display: flex;
-
+  margin-left: 30px;
   color: var(--visa-blue);
   text-decoration: none;
-  font-weight: 500;
   flex: 1;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  min-width: 0;
 }
 
+@keyframes contactFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;

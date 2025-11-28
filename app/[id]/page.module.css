@@ -151,7 +151,6 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 1.1;
   letter-spacing: -1.5px;
   filter: drop-shadow(0 2px 12px rgba(102, 126, 234, 0.15));
   animation: gradient 4s ease infinite;
@@ -191,7 +190,7 @@
 
 .description {
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.6;
   margin: 0;
   font-weight: 400;
   span {
@@ -378,6 +377,7 @@ li.programItem.depth0 {
 }
 /* 그냥 글자만 있는 경우 */
 li.programItem.depth0.str {
+  padding-left: 10px;
   font-size: 16px;
   font-weight: 500;
   color: var(--foreground);

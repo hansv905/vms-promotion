@@ -21,7 +21,7 @@ export default function PromotionClient({
           className={styles.applyBtn}
           onClick={() => setIsDialogOpen(true)}
         >
-          Contact/Enquire Now
+          Contact Now
         </button>
       </div>
       <ContactDialog

@@ -17,7 +17,7 @@ export default function ContactDialog({
 }: ContactDialogProps) {
   if (!isOpen) return null;
 
-  const { Name, Offer, Contact } = promotionItem;
+  const { id, Offer, Contact } = promotionItem;
 
   return (
     <div className={styles.overlay} onClick={onClose}>
@@ -28,14 +28,54 @@ export default function ContactDialog({
 
         <h2>Contact Us</h2>
         <p className={styles.subtitle}>{Offer}</p>
-        {Object.entries(Contact).map(([key, value]) => (
-          <div key={key} className={styles.contactRow}>
-            <label>{key}</label>
-            <a href={`mailto:${value}`} className={styles.contactLink}>
-              {String(value)}
-            </a>
-          </div>
-        ))}
+        <div
+          className={styles.contactList}
+          style={{
+            maxHeight: '60vh',
+            overflowY: 'auto',
+          }}
+        >
+          {Object.entries(Contact).map(([key, value], idx) => (
+            <div key={idx} className={styles.contactRow}>
+              <strong>
+                {key.split('_').length > 1 ? (
+                  <span>
+                    <b>{key.split('_')[0]}</b>
+                    {key.split('_')[1]}
+                  </span>
+                ) : (
+                  key
+                )}
+              </strong>
+
+              {value.startsWith('http') ? (
+                <a
+                  href={String(value)}
+                  className={styles.contactLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {value}
+                </a>
+              ) : key.startsWith('CH_Wechat') ? (
+                <span className={styles.contactText}>
+                  {value}
+                  <img
+                    src={`/img/${id}/qr.png`}
+                    alt="WeChat QR Code"
+                    className={styles.qrCode}
+                    loading="lazy"
+                    onError={(e) => (e.currentTarget.style.display = 'none')}
+                  />
+                </span>
+              ) : (
+                <a href={`mailto:${value}`} className={styles.contactLink}>
+                  {value}
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

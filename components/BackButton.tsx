@@ -17,6 +17,7 @@ export default function BackButton({ className }: BackButtonProps) {
       onClick={() => router.push('/')}
     >
       <ChevronLeft size={24} />
+      Back
       {/* {children} */}
     </button>
   );
