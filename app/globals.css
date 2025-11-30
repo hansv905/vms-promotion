@@ -191,7 +191,7 @@ a {
     gap: 10px;
     padding-left: 5px;
     margin-bottom: 5px;
-    line-height: 1.6;
+    line-height: 1.5;
 
     &:before {
       content: '•';
@@ -211,7 +211,7 @@ a {
   .termText {
     flex: 1;
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #495057;
   }
 }
