@@ -194,6 +194,13 @@ export default async function PromotionDetailPage({
                   </li>
                 );
               })}
+            {typeof item.Program === 'string' && (
+              <li
+                className={`${styles.programItem} ${styles.depth0} ${styles.str}`}
+              >
+                {item.Program}
+              </li>
+            )}
           </ul>
         </div>
 
