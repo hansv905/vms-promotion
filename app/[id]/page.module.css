@@ -124,6 +124,8 @@
 
 .location {
   margin-top: 8px;
+  text-indent: -22px;
+  padding-left: 20px;
   span {
     display: block;
     margin-bottom: 10px;
@@ -146,6 +148,7 @@
 .offer {
   font-size: clamp(32px, 5vw, 36px);
   font-weight: 800;
+  line-height: 1.2;
   background: var(--visa-blue);
   -webkit-background-clip: text;
   background-clip: text;
@@ -176,6 +179,7 @@
 
 .sectionTerms {
   padding: 28px 15px;
+  padding-top: 15px;
   margin-bottom: 20px;
   line-height: 1.5;
 }

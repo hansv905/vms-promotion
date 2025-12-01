@@ -6,7 +6,7 @@ import { promotionData } from '@/data/promotions';
 import styles from './page.module.css';
 
 const countries = ['All', 'KOREA', 'Thailand'];
-const categories = ['All', 'Health Checkup', 'Dentistry', 'Spa', 'Dermatology'];
+const categories = ['All', 'Health Checkup', 'Dentistry', 'Dermatology', 'Spa'];
 
 export default function PromotionsPage() {
   const [selectedCountry, setSelectedCountry] = useState('All');
