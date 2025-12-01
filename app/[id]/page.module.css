@@ -126,6 +126,7 @@
   margin-top: 8px;
   text-indent: -22px;
   padding-left: 20px;
+  line-height: 1.2;
   span {
     display: block;
     margin-bottom: 10px;
@@ -133,6 +134,8 @@
   svg {
     margin-right: 6px;
     vertical-align: text-top;
+    position: relative;
+    top: 2px;
     color: var(--visa-blue);
   }
 }
@@ -395,7 +398,6 @@ li.programItem.depth0.str {
 }
 li.programItem.depth1 {
   margin-left: 5px;
-  margin-top: 4;
   margin-bottom: 5px;
   padding-left: 20px;
   font-size: 16px;
@@ -413,6 +415,7 @@ li.programItem.depth1::after {
 
 li.programItem.depth2 {
   margin-left: 20px;
+  margin-bottom: 3px;
   padding-left: 20px;
   font-size: 15px;
   color: #999;
