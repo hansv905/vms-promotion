@@ -190,6 +190,10 @@ a {
     margin-bottom: 5px;
     line-height: 1.5;
 
+    strong {
+      font-weight: bold;
+    }
+
     &:before {
       content: '•';
       color: #999;

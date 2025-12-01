@@ -158,23 +158,42 @@ export default async function PromotionDetailPage({
           <h3 className={styles.sectionTitle}>Program Details</h3>
           <ul className={styles.programList}>
             {Array.isArray(item.Program) &&
-              item.Program.map((v, i) => (
-                <li
-                  key={i}
-                  className={`${styles.programItem} ${
-                    styles[`depth${getLIDepth(v)}`]
-                  }`}
-                >
-                  {v.replace(/^(-+)/, '')}
-                </li>
-              ))}
-            {typeof item.Program === 'string' && (
-              <li
-                className={`${styles.programItem} ${styles.depth0} ${styles.str}`}
-              >
-                {item.Program}
-              </li>
-            )}
+              item.Program.map((v, i) => {
+                const boldMatch = v.match(/^(-+)b\s*(.*)/i);
+                if (boldMatch) {
+                  // -b, --b 등으로 시작하면 bold 처리
+                  return (
+                    <li
+                      key={i}
+                      className={`${styles.programItem} ${
+                        styles[`depth${boldMatch[1].length}`]
+                      }`}
+                    >
+                      <strong>
+                        {boldMatch[2]
+                          .split(/(\([^)]+\))/)
+                          .map((part, idx) =>
+                            /^\([^)]+\)$/.test(part) ? (
+                              <span key={idx}>{part}</span>
+                            ) : (
+                              part
+                            )
+                          )}
+                      </strong>
+                    </li>
+                  );
+                }
+                return (
+                  <li
+                    key={i}
+                    className={`${styles.programItem} ${
+                      styles[`depth${getLIDepth(v)}`]
+                    }`}
+                  >
+                    {v.replace(/^(-+)/, '')}
+                  </li>
+                );
+              })}
           </ul>
         </div>
 
@@ -183,7 +202,17 @@ export default async function PromotionDetailPage({
           <ul className="termsList">
             {item.Terms.map((v, i) => (
               <li key={i} className="termItem">
-                {v}
+                <span>
+                  {v
+                    .split(/(Contact Now)/)
+                    .map((part, idx) =>
+                      part === 'Contact Now' ? (
+                        <strong key={idx}>Contact Now</strong>
+                      ) : (
+                        <span key={idx}>{part}</span>
+                      )
+                    )}
+                </span>
               </li>
             ))}
           </ul>

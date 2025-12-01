@@ -373,6 +373,13 @@ ul.programList {
 li.programItem {
   margin-bottom: 5px;
   padding-left: 0;
+
+  strong {
+    font-weight: bold;
+    span {
+      display: block;
+    }
+  }
 }
 li.programItem.depth0 {
   font-size: 16px;
@@ -398,9 +405,9 @@ li.programItem.depth1::after {
   position: absolute;
   left: 5px;
   top: 10px;
-  width: 3px;
-  height: 3px;
-  background-color: var(--visa-blue);
+  width: 4px;
+  height: 4px;
+  background-color: #999;
   border-radius: 50%;
 }
 
