@@ -383,7 +383,7 @@ li.programItem.depth0 {
 li.programItem.depth0.str {
   padding-left: 10px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: bold;
   color: var(--foreground);
 }
 li.programItem.depth1 {
