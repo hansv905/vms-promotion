@@ -712,9 +712,15 @@ export const promotionData: Promotion[] = [
     Offer: '15% off Yeoyong Special Intensive Facial Care Program',
     Program: [
       '15% off Yeoyong Special Intensive Facial Care Program (70 mins)',
-      'Original Price: KRW 130,000',
-      'Price for Visa Cardholders: KRW 110,500',
-      'Program: Constitution check, Deep cleansing, Hwasadoksul (Circulation massage), Facial massage, Oriental mask, Constitution tea & refreshments',
+      '- Original Price: KRW 130,000',
+      '- Price for Visa Cardholders: KRW 110,500',
+      '- Program',
+      '-- Constitution check',
+      '-- Deep cleansing',
+      '-- Hwasadoksul (Circulation massage)',
+      '-- Facial massage',
+      '-- Oriental mask',
+      '-- Constitution tea & refreshments',
     ],
     Location: [
       '2F, Heungseong Building, 60 Seokchonhosu-ro 12-gil, Songpa-gu, Seoul',
