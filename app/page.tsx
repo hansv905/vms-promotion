@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PromotionCard from '@/components/PromotionCard';
 import { promotionData } from '@/data/promotions';
 import styles from './page.module.css';
@@ -11,6 +11,16 @@ const categories = ['All', 'Health Checkup', 'Dentistry', 'Dermatology', 'Spa'];
 export default function PromotionsPage() {
   const [selectedCountry, setSelectedCountry] = useState('All');
   const [selectedCategory, setSelectedCategory] = useState('All');
+
+  useEffect(() => {
+    const savedCategory = localStorage.getItem('selectedCategory');
+    if (savedCategory) setSelectedCategory(savedCategory);
+  }, []);
+
+  const handleCategorySelect = (category: string) => {
+    setSelectedCategory(category);
+    localStorage.setItem('selectedCategory', category);
+  };
 
   const filteredPromotionData =
     selectedCategory === 'All'
@@ -33,7 +43,7 @@ export default function PromotionsPage() {
             className={`${styles.categoryBtn} ${
               selectedCategory === category ? styles.active : ''
             }`}
-            onClick={() => setSelectedCategory(category)}
+            onClick={() => handleCategorySelect(category)}
           >
             {category}
           </button>

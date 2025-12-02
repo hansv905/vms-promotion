@@ -23,12 +23,7 @@ interface PromotionCardProps {
 
 export default function PromotionCard({ data }: PromotionCardProps) {
   return (
-    <Link
-      href={`/${data.id}`}
-      className={styles.cardLink}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <Link href={`/${data.id}`} className={styles.cardLink}>
       <div className={styles.card}>
         <div className={styles.imageWrapper}>
           <img
