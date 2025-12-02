@@ -156,7 +156,7 @@ body {
 
 /* 모바일 전용 컨테이너 */
 body > div {
-  width: 100%;
+  /* width: 100%; */
   max-width: 640px;
   background: var(--background);
   min-height: 100vh;
