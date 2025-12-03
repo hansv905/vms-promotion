@@ -34,7 +34,7 @@ export const promotionData: Promotion[] = [
   },
   {
     id: '2',
-    Category: 'Health Checkup & Anti-aging',
+    Category: 'Health Checkup',
     Name: 'Chaum Life Center',
     Country: 'KOREA',
     Description: [
