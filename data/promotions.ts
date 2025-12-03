@@ -402,7 +402,7 @@ export const promotionData: Promotion[] = [
     image: ['1.jpg', '2.jpg', '3.jpg'],
   },
   {
-    id: '12',
+    id: '18',
     Category: 'Dermatology',
     Name: 'Lamiche Clinic',
     Country: 'KOREA',
@@ -416,10 +416,10 @@ export const promotionData: Promotion[] = [
     Program: '15% off All Skin Treatments',
     Location: ['7F, 14, Baekjegobun-ro 7-gil, Songpa-gu, Seoul'],
     Terms: [
-      'Discount is not applicable to any items or services outside the scope of dermatology treatments.',
       'The offers under the Health and Wellness Benefits with Visa program are valid from 15 December 2025 to 14 December 2026 (Both dates inclusive).',
       'To redeem the offer, advanced booking is required.',
       'Cardholders must mention the Visa offer [Visa2025] at the time of reservation and make payment with an eligible Visa card.',
+      'Discount is not applicable to any items or services outside the scope of dermatology treatments.',
       'The offer cannot be combined with other promotions or discounts.',
       'This promotion applies to non-registered customers of the clinic.',
       'This promotion is not available to any: (i) Korean citizens; (ii) any individual that is insured under the Korean national health insurance, either as a principal or a dependent; and (iii) any individual residing in Korea or using a Visa card issued in Korea.',
@@ -592,7 +592,7 @@ export const promotionData: Promotion[] = [
     image: ['1.jpg', '2.jpg'],
   },
   {
-    id: '18',
+    id: '12',
     Category: 'Dermatology',
     Name: 'Timeless Dermatology Clinic',
     Country: 'KOREA',
