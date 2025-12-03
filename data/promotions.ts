@@ -421,6 +421,7 @@ export const promotionData: Promotion[] = [
       'To redeem the offer, advanced booking is required.',
       'Cardholders must mention the Visa offer [Visa2025] at the time of reservation and make payment with an eligible Visa card.',
       'The offer cannot be combined with other promotions or discounts.',
+      'This promotion applies to non-registered customers of the clinic.',
       'This promotion is not available to any: (i) Korean citizens; (ii) any individual that is insured under the Korean national health insurance, either as a principal or a dependent; and (iii) any individual residing in Korea or using a Visa card issued in Korea.',
       'Offer is valid only for Visa cards issued in Malaysia, Thailand, Philippines, India, Hong Kong, China, Taiwan, Japan, Australia, New Zealand, Myanmar, Cambodia and Sri Lanka.',
       'Click the Contact Now below to make your booking.',
