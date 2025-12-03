@@ -631,7 +631,7 @@ export const promotionData: Promotion[] = [
       'The offer cannot be combined with other promotions or discounts.',
       'This promotion is not available to any: (i) Korean citizens; (ii) any individual that is insured under the Korean national health insurance, either as a principal or a dependent; and (iii) any individual residing in Korea or using a Visa card issued in Korea.',
       'Offer is valid only for Visa cards issued in Malaysia, Thailand, Philippines, India, Hong Kong, China, Taiwan, Japan, Australia, New Zealand, Myanmar, Cambodia and Sri Lanka.',
-      'Click the Contact/Enquire Now below to make your booking.',
+      'Click the Contact Now below to make your booking.',
     ],
     Contact: {},
     image: ['1.jpg', '2.jpg'],
