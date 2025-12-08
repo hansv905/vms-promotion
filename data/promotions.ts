@@ -14,7 +14,7 @@ export const promotionData: Promotion[] = [
     ],
     Language: ['English'],
     Offer: 'Visa Exclusive: 15% All off Health Screening Packages',
-    Program: '15% All off Health Screening Packages',
+    Program: ['15% off All Health Screening Packages'],
     Location: [
       'Jongno Center: 5F Gran Seoul Tower, 33, Jong-ro, Jongno-gu, Seoul',
       'Gangnam Center: 7F to 11F, I Tower, 326, Teheran-ro, Gangnam-gu, Seoul',
@@ -107,7 +107,7 @@ export const promotionData: Promotion[] = [
     ],
     Language: ['English', '中文', '日本語'],
     Offer: 'Visa Exclusive: 15% off Health Screening Packages',
-    Program: '15% off All Health Screening Packages',
+    Program: ['15% off All Health Screening Packages'],
     Location: ['1205, Jungang-ro, Ilsandong-gu, Goyang-si, Gyeonggi-do'],
     LocationUrl: ['https://naver.me/F6lTzOMo'],
     Terms: [
@@ -340,8 +340,8 @@ export const promotionData: Promotion[] = [
       'By offering conscious sedation, Dain Dental ensures a comfortable, low-stress implant experience for patients.',
     ],
     Language: ['English', '中文'],
-    Offer: '10% off All Dental Treatments',
-    Program: '10% off All Dental Treatments',
+    Offer: 'Visa Exclusive:10% off All Dental Treatments',
+    Program: ['10% off All Dental Treatments'],
     Location: ['10F, 11F, Grand Plaza, 94, Sinchon-ro, Mapo-gu, Seoul'],
     LocationUrl: ['https://naver.me/G65tqJ4z'],
     Terms: [
@@ -409,7 +409,7 @@ export const promotionData: Promotion[] = [
     ],
     Language: ['English', '中文', '日本語', 'Bahasa Indonesia'],
     Offer: 'Visa Exclusive: 15% off All Skin Treatments',
-    Program: '15% off All Skin Treatments',
+    Program: ['15% off All Skin Treatments'],
     Location: ['3F, 42, Seocho-daero73-gil, Seocho-gu, Seoul'],
     LocationUrl: ['https://naver.me/xoH9loKx'],
     Terms: [
@@ -526,7 +526,7 @@ export const promotionData: Promotion[] = [
     ],
     Language: ['English', '中文'],
     Offer: 'Visa Exclusive: 15% off All Skin Treatments',
-    Program: '15% off All Skin Treatments',
+    Program: ['15% off All Skin Treatments'],
     Location: ['531, Gangnam-daero, Seocho-gu, Seoul'],
     LocationUrl: ['https://naver.me/G8hZk79W'],
     Terms: [
@@ -593,7 +593,7 @@ export const promotionData: Promotion[] = [
     ],
     Language: ['English', '中文'],
     Offer: 'Visa Exclusive: 15% off All Skin Treatments',
-    Program: '15% off All Skin Treatments',
+    Program: ['15% off All Skin Treatments'],
     Location: ['5F, JIMIAN Building, 5 Eonju-ro 168-gil, Gangnam-gu, Seoul'],
     LocationUrl: ['https://naver.me/5PVF760L'],
     Terms: [
@@ -657,7 +657,7 @@ export const promotionData: Promotion[] = [
     ],
     Language: ['English', '中文', '日本語', 'ภาษาไทย', 'Bahasa Indonesia'],
     Offer: 'Visa Exclusive: 15% off All Skin Treatments',
-    Program: '15% off All Skin Treatments',
+    Program: ['15% off All Skin Treatments'],
     Location: ['5F-7F, 14, Baekjegobun-ro 7-gil, Songpa-gu, Seoul'],
     LocationUrl: ['https://naver.me/5CW7w4kg'],
     Terms: [
