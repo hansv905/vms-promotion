@@ -141,6 +141,10 @@
   }
 }
 
+.locationLink {
+  cursor: pointer;
+}
+
 .category {
   display: inline-block;
   color: var(--visa-yellow);

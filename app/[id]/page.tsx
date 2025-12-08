@@ -116,11 +116,17 @@ export default async function PromotionDetailPage({
           <h3 className={styles.sectionTitle}>Location</h3>
           <p className={styles.location}>
             {item.Location.map((v, idx) => (
-              <span key={idx}>
+              <a
+                key={idx}
+                href={item.LocationUrl[idx]}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.locationLink}
+              >
                 <MapPinned size={16} />
                 {v}
                 <ExternalLink style={{ marginLeft: '5px' }} size={16} />
-              </span>
+              </a>
             ))}
           </p>
         </div>
