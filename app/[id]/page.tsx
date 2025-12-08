@@ -3,8 +3,9 @@ import { promotionData } from '@/data/promotions';
 import BackButton from '@/components/BackButton';
 import styles from './page.module.css';
 import ImageSlider from '@/components/ImageSlider';
-import { MapPinned } from 'lucide-react';
+import { MapPinned, ExternalLink } from 'lucide-react';
 import PromotionClient from './PromotionClient';
+
 export function generateStaticParams() {
   return promotionData.map((promo) => ({
     id: promo.id,
@@ -76,7 +77,7 @@ export default async function PromotionDetailPage({
       <header className={styles.header}>
         <BackButton />
         <h1>{item.Offer}</h1>
-        <div className={styles.country}>{item.Country}</div>
+        {/* <div className={styles.country}>{item.Country}</div> */}
       </header>
 
       <div className={styles.content}>
@@ -86,6 +87,17 @@ export default async function PromotionDetailPage({
           />
         </div>
         <div className={styles.infoSection}>
+          {item.Url !== '' && (
+            <a
+              className={styles.site}
+              href={item.Url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Site
+              <ExternalLink size={14} />
+            </a>
+          )}
           <span className={styles.category}>{item.Category}</span>
           <h2 className={styles.name}>{item.Name}</h2>
           <p className={styles.offer}>{item.Offer}</p>
@@ -107,6 +119,7 @@ export default async function PromotionDetailPage({
               <span key={idx}>
                 <MapPinned size={16} />
                 {v}
+                <ExternalLink style={{ marginLeft: '5px' }} size={16} />
               </span>
             ))}
           </p>

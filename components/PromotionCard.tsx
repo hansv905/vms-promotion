@@ -4,6 +4,7 @@ import { MapPinned } from 'lucide-react';
 
 export interface Promotion {
   id: string;
+  Url: string;
   Name: string;
   Country: string;
   Category: string;
@@ -12,6 +13,7 @@ export interface Promotion {
   Offer: string;
   Program: Record<string, Record<string, string[]>> | string | string[];
   Location: string[];
+  LocationUrl: string[];
   Terms: string[];
   Contact: Record<string, string>;
   image: string[];

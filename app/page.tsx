@@ -34,6 +34,11 @@ export default function PromotionsPage() {
       </header> */}
       <div className={styles.bannerWrap}>
         <img src="/img/main.jpg" alt="Promotion Banner" />
+        {/* <h2>Health & Wellness Korea Program</h2>
+        <img
+          src="/img/visa-logo.png"
+          alt="Health & Wellness Korea Program Banner"
+        /> */}
       </div>
 
       <div className={styles.categoryFilter}>

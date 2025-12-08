@@ -115,6 +115,7 @@
 }
 
 .infoSection {
+  position: relative;
   padding: 32px 15px;
   background: #fff;
   /* border-bottom: 1px solid rgba(26, 31, 113, 0.06); */
@@ -161,6 +162,26 @@
   filter: drop-shadow(0 2px 12px rgba(102, 126, 234, 0.15));
   animation: gradient 4s ease infinite;
   background-size: 200% 200%;
+}
+
+.site {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 12px;
+  margin-right: 8px;
+  background: transparent;
+  color: var(--visa-blue);
+  font-size: 13px;
+  font-weight: 600;
+  border: 1.5px solid var(--visa-blue);
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .name {
