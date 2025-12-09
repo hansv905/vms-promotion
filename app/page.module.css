@@ -152,8 +152,16 @@
   letter-spacing: -0.3px;
 }
 
-/* 작은 모바일 화면 */
-@media (max-width: 360px) {
+/* 모바일 */
+@media (max-width: 400px) {
+  .bannerWrap {
+    h2 {
+      font-size: 20px;
+    }
+    img {
+      height: 25px;
+    }
+  }
   .promotionGrid {
     gap: 12px;
     padding: 16px;

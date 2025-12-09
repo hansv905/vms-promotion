@@ -125,14 +125,19 @@
   margin-top: 8px;
 }
 
-/* 모바일 반응형 스타일 */
-@media (max-width: 360px) {
+/* 모바일 */
+@media (max-width: 400px) {
   .content {
     padding: 10px;
   }
 
   .category {
     font-size: 12px;
+  }
+
+  .langBadge {
+    font-size: 11px;
+    padding: 5px 5px;
   }
 
   .name {
