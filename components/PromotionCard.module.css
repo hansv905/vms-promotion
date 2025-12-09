@@ -126,7 +126,7 @@
 }
 
 /* 모바일 */
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .content {
     padding: 10px;
   }
