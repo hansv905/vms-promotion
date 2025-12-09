@@ -68,6 +68,8 @@ export default function ContactDialog({
                     onError={(e) => (e.currentTarget.style.display = 'none')}
                   />
                 </span>
+              ) : key.startsWith('Common_Kakaotalk') ? (
+                <span className={styles.kakaoText}>{value}</span>
               ) : (
                 <a href={`mailto:${value}`} className={styles.contactLink}>
                   {value}
