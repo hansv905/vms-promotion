@@ -138,6 +138,7 @@
   .langBadge {
     font-size: 11px;
     padding: 5px 5px;
+    letter-spacing: -0.7px;
   }
 
   .name {
