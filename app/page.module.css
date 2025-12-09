@@ -153,9 +153,10 @@
 }
 
 /* 모바일 */
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .bannerWrap {
     h2 {
+      padding: 20px 10px;
       font-size: 20px;
     }
     img {
