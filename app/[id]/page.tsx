@@ -124,7 +124,7 @@ export default async function PromotionDetailPage({
                 className={styles.locationLink}
               >
                 <MapPinned size={16} />
-                {v}
+                <b>{v}</b>
                 <ExternalLink style={{ marginLeft: '5px' }} size={16} />
               </a>
             ))}

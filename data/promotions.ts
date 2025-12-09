@@ -19,7 +19,7 @@ export const promotionData: Promotion[] = [
       'Jongno Center: 5F Gran Seoul Tower, 33, Jong-ro, Jongno-gu, Seoul',
       'Gangnam Center: 7F to 11F, I Tower, 326, Teheran-ro, Gangnam-gu, Seoul',
     ],
-    LocationUrl: ['1.https://naver.me/xExWsEhN', '2.https://naver.me/5MV7Kizu'],
+    LocationUrl: ['https://naver.me/xExWsEhN', 'https://naver.me/5MV7Kizu'],
     Terms: [
       'The offers under the Health and Wellness Benefits with Visa program are valid from 15 December 2025 to 14 December 2026 (Both dates inclusive).',
       'To redeem the offer, advanced booking is required.',
@@ -164,7 +164,7 @@ export const promotionData: Promotion[] = [
       'Building 1: 566, Nonhyeon-ro, Gangnam-gu, Seoul',
       'Building 2: 156, Bongeunsa-ro, Gangnam-gu, Seoul',
     ],
-    LocationUrl: ['1.https://naver.me/FQVGmMYE', '2.https://naver.me/5du4AhHf'],
+    LocationUrl: ['https://naver.me/FQVGmMYE', 'https://naver.me/5du4AhHf'],
     Terms: [
       'Please note that certain examinations included in the package may not be performed due to individual circumstances. In such cases, the cost of the specific examination will not be reimbursed.',
       'The offers under the Health and Wellness Benefits with Visa program are valid from 15 December 2025 to 14 December 2026 (Both dates inclusive).',
@@ -220,10 +220,7 @@ export const promotionData: Promotion[] = [
       'Gangnam Center: 411, Teheran-ro, Gangnam-gu, Seoul',
       'Gwanghwamun Center: 149, Sejong-daero, Jongno-gu, Seoul',
     ],
-    LocationUrl: [
-      '1. https://naver.me/FtThTJ4j',
-      '2.https://naver.me/FTXwmH53',
-    ],
+    LocationUrl: ['1. https://naver.me/FtThTJ4j', 'https://naver.me/FTXwmH53'],
     Terms: [
       'Please note that certain examinations included in the package may not be performed due to individual circumstances. In such cases, the cost of the specific examination will not be reimbursed.',
       'The offers under the Health and Wellness Benefits with Visa program are valid from 15 December 2025 to 14 December 2026 (Both dates inclusive).',
