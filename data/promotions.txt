@@ -145,7 +145,7 @@ export const promotionData: Promotion[] = [
       '-- Blood Test (Thyroid Test)',
       '-- GY Ultrasound',
       '-- Blood Typing Test',
-      '-- Urine Test (UA10 types, Urine Sediment)',
+      '-- Urine Test (UA10 Types, Urine Sediment)',
       '-- Chest X-ray',
       '-- Electrocardiogram',
       '-- Irregular Ab Screening (Unexpected Antibody Screening)',
@@ -433,7 +433,7 @@ export const promotionData: Promotion[] = [
   {
     id: '12',
     Category: 'Dermatology',
-    Url: '',
+    Url: 'https://www.tlskin.com/landing/yourskin_en/',
     Name: 'Timeless Dermatology Clinic',
     Country: 'KOREA',
     Description: [
@@ -591,7 +591,7 @@ export const promotionData: Promotion[] = [
     Description: [
       'Dr. Wellmadeone Dermatology Clinic provides meticulous care down to the final 1% after laser treatments, restoring the skin’s natural strength through proprietary bio-regenerative technology.',
       'The clinic offers natural and long-lasting wrinkle improvement by stimulating the skin’s own collagen regeneration rather than using fillers.',
-'All treatments are performed by a Seoul National University–trained, board-certified dermatologist who is an invited Asian speaker at both the European and American Academies of Dermatology.',
+      'All treatments are performed by a Seoul National University–trained, board-certified dermatologist who is an invited Asian speaker at both the European and American Academies of Dermatology.',
     ],
     Language: ['English', '中文'],
     Offer: 'Visa Exclusive: 15% off All Skin Treatments',
@@ -779,12 +779,12 @@ export const promotionData: Promotion[] = [
       '- Original Price: KRW 130,000',
       '- Visa Exclusive: KRW 110,500',
       '- Program',
-      '-- Constitution check',
-      '-- Deep cleansing',
+      '-- Constitution Check',
+      '-- Deep Cleansing',
       '-- Hwasadoksul(Circulation Massage)',
-      '-- Facial massage',
+      '-- Facial Massage',
       '-- Oriental Mask',
-      '-- Constitutional tea & Refreshments',
+      '-- Constitutional Tea & Refreshments',
     ],
     Location: [
       '2F, Heungseong Building, 60 Seokchonhosu-ro 12-gil, Songpa-gu, Seoul',
