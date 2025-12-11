@@ -424,7 +424,7 @@ export const promotionData: Promotion[] = [
     ],
     Contact: {
       EN_Whatsapp: 'https://wa.me/821025318568',
-      CH_REDNote: 'https://xhslink.com/m/38TyAWkILe',
+      CH_Wechat: 'ID: pixelab_kr',
       JP_Line: 'https://lin.ee/W4fEtrn',
       Common_Email: 'kloen.ps@gmail.com',
     },
@@ -609,7 +609,7 @@ export const promotionData: Promotion[] = [
     ],
     Contact: {
       Common_Email: 'drwcn01@gmail.com',
-      CH_Weibo: 'https://m.weibo.cn/profile/7915661507',
+      CH_Wechat: 'ID: Dr_wellmadeone',
     },
     image: ['1.jpg', '2.jpg'],
   },
@@ -676,8 +676,6 @@ export const promotionData: Promotion[] = [
     Contact: {
       EN_Whatsapp: 'https://wa.me/821042625990',
       CH_Wechat: 'ID:lamichecn21',
-      CH_Line: 'https://manager.line.biz/account/@892lwftl/insight/friends',
-      JP_Line: 'https://line.me/ti/p/snEY9WaCqL',
       JP_Instagram: 'https://www.instagram.com/lamiche_japan',
       MN_Instagram: 'https://www.instagram.com/lamichecollab_mongolia/',
     },
